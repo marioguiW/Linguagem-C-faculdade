@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     printf("Mora perto da vitima? ");
     scanf("%d", &mora);
 
-    printf("Devia para a vitima? ");x'x'
+    printf("Devia para a vitima? ");
     scanf("%d", &divida);
 
     printf("Ja trabalhou com a vitima? ");

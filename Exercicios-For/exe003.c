@@ -5,7 +5,7 @@ int main(){
     int numero=0;
     int total=0;
 
-    for (int i= 0; i < 11; i++)
+    for (int i= 0; i < 10; i++)
     {
         printf("Digite vários numeros :\n");
         scanf("%i",&numero);
@@ -14,8 +14,7 @@ int main(){
         {
             total = numero;
         }
-        elsee
         
     }
-    
+    printf("O maior numero foi %i", total);
 }
