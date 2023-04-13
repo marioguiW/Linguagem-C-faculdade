@@ -4,4 +4,13 @@
 #include <stdio.h>
 int main(){
     
+    for (int i = 0; i < 1000; i++)
+    {
+        if (i % 11 == 5)
+        {
+            printf("%i\n", i);
+        }
+        
+    }
+    
 }
