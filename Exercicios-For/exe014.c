@@ -5,18 +5,27 @@
 #include <stdio.h>
 int main(){
 
-    int numero;
+    int numero, total=0;
     
     printf("Digite um numero para saber se ele e perfeito :\n");
     scanf("%i", &numero);
 
-    for (int i = numero; i <= numero; i--)
+    for (int i = numero; i > 0; i--)
     {
-        if (numero / i == 0)
+        if (numero % i == 0)
         {
-            /* code */
+            total = total + i;
+
         }
         
     }
-    
+    total = total - numero;
+    if (total == numero)
+    {
+        printf("Este numero eh perfeito!");
+    }
+    else
+    {
+        printf("Este numero nao eh perfeito!");
+    }
 }

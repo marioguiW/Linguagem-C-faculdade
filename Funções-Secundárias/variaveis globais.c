@@ -1,7 +1,6 @@
 #include <stdio.h>
 float soma(float x, float y){ 
     float soma;
-    printf("Funcao secundaria");
     soma = x + y;
     return soma;
 }
@@ -14,7 +13,6 @@ int main(){
     total = soma(x,y);
     soma(x,y);  // mandando por parametro o valor de x e o valor de y.
     printf("A soma de x + y eh %f", total);
-    printf("Funcao principal\n");
     return 0;
 
 }
