@@ -21,7 +21,7 @@ int options(float totalGasto, char opcaoEscolhida){
     }
     else if (opcaoEscolhida == 'c')
     {
-        totalGasto
+        totalGasto = 
     }
     
     

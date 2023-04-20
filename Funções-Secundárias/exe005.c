@@ -4,7 +4,7 @@
 
 #include <stdio.h>
 
-float regua(float metros){
+void regua(float metros){
     float dm,cm,mm;
 
     dm = metros * 10;

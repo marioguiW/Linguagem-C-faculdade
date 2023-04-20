@@ -11,10 +11,12 @@ int main(){
         switch(time){
             case 'c':
             case 'C':
+                
                 contC=contC+1;
                 break;
-            case 'p':
-            case 'P':
+            case 'c':
+            case 'C':
+               
                 contP= contP+1;
                 break;
             case 'f':
