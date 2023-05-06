@@ -2,8 +2,11 @@
 // iguais e os escreva na tela.
 
 #include <Stdio.h>
+#include <time.h>
 
 int main(){
+
+    srand(time(NULL));
 
     int vetor[10];
 
