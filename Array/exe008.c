@@ -3,6 +3,7 @@
 
 #include <Stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 int main(){
 
@@ -12,17 +13,22 @@ int main(){
 
     for (int i = 0; i < 10; i++)
     {
-        printf("Digite os valores do vetor : ");
-        scanf("%d", &vetor[i]);
+        vetor[i] = rand()%10;
+        printf("%d ", vetor[i]);
     }
 
-    vetorIgual = vetor[0];
+    printf("\n---------------------------\n");
 
     for (int i = 0; i < 10; i++)
     {
-        if (vetor[i] == vetor[i+1])
+        for (int j = i + 1; j<10;j++)
         {
-            vetorIgual = i;
+            if (vetor[i] == vetor[j])
+            {
+                printf("%d ", vetor[i]);
+                break;
+            }
+            
         }
         
         
