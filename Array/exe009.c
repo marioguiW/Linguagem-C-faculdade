@@ -43,6 +43,7 @@ int main(){
         printf("Fim código...");
     }
     
+    fflush(stdin);
     printf("Deseja ver novamente ? s- sim n-nao\n");
     scanf("%d",&desejo);
 
