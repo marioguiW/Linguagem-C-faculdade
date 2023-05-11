@@ -10,7 +10,7 @@ int main(){
     rand(time(NULL));
 
     int vetor1 [10];
-    int vetorImpar[];
+    int vetorImpar[10];
 
     for (int i = 0; i < 10; i++)
     {
@@ -19,26 +19,24 @@ int main(){
 
     for (int i = 0; i < 10; i++)
     {
-        if (vetor1[i] % 2 == 0)
+        if ((vetor1[i] % 2) != 0)
         {
             vetorImpar[i] = vetor1[i];
+        }else{
+            vetorImpar[i] = 0;
+        }
     }
 
     for (int i = 0; i < 10; i++)
     {
-        printf("%d", vetor1[i]);
+        printf("%d ", vetor1[i]);
 
     }
     
+    printf("\n");
+
     for (int i = 0; i < 10; i++)
     {
-        printf("%d", vetorImpar[i]);
+        printf("%d ", vetorImpar[i]);
     }
-    
-}
-    
-
-    
-    
-
 }
