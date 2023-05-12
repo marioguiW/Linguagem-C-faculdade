@@ -10,15 +10,16 @@ int main(){
     srand(time(NULL));
 
     int vetor[20];
-    int contador = 20;
+    int contador = 19;
     int armazem = 0;
+    int a= 1;
 
     for (int i = 0; i < 20; i++)
     {
-        vetor[i] = rand()%20;
+        vetor[i] = a;
         printf("%d ", vetor[i]);
+        a++;
     }
-
 
     for (int i = 0; i < contador; i++)
     {
