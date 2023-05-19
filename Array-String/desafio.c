@@ -11,60 +11,197 @@
 
 int main(){
 
-    int escolha;
-    char resposta[10];
 
-    char palavras[5][10];
-    char palavra1[] = "kratos";
-    char palavra2[] = "mario";
-    char palavra3[] = "link";
-    char palavra4[] = "scorpion";
-    char palavra5[] = "franklin";
+        int novamente = 1;
 
-    // Atribui a primeira palavra a primeira linha da matriz**
-    // strcpy(palavras[0], palavra1);
-    // strcpy(palavras[1], palavra2);
-    // strcpy(palavras[2], palavra3);
-    // strcpy(palavras[3], palavra4);
-    // strcpy(palavras[4], palavra5);
+        while (novamente == 1)
+        {
+        
+        int escolha;
+        char resposta[10];
+        int resultado;
 
-    strcpy(palavras[0], palavra1);
-    strcpy(palavras[1], palavra2);
-    strcpy(palavras[2], palavra3);
-    strcpy(palavras[3], palavra4);
-    strcpy(palavras[4], palavra5);
-    
-    printf("%s", palavras[0]);
+        char palavras[5][10];
+        char palavra1[] = "kratos";
+        char palavra2[] = "mario";
+        char palavra3[] = "link";
+        char palavra4[] = "scorpion";
+        char palavra5[] = "franklin";
 
-    printf("1 |   |   |   |   |   |   | * | * | * | * | \n");
-    printf("2 |   |   |   |   |   | * | * | * | * | * | \n");
-    printf("3 |   |   |   |   | * | * | * | * | * | * | \n");
-    printf("4 |   |   |   |   |   |   |   | * | * | * | \n");
-    printf("5 |   |   |   |   |   |   |   |   | * | * | \n");
-    printf("1 - Deus da Guerra dos games?\n");
-    printf("2 - Maior encanador dos games?\n");
-    printf("3 - Personagem Principal do jogo Zelda?\n");
-    printf("4 - Personagem com poder de fogo de Mortal Kombat\n");
-    printf("5 - personagem negro de uma das maiores franquias de Games!\n");
-    printf("\n");
+        strcpy(palavras[0], palavra1);
+        strcpy(palavras[1], palavra2);
+        strcpy(palavras[2], palavra3);
+        strcpy(palavras[3], palavra4);
+        strcpy(palavras[4], palavra5);
+        
 
-    printf("Qual sua escolha?");
-    scanf("%d", &escolha);
-
-    switch (escolha)
-    {
-    case 1:
-        printf("1 |   |   |   |   |   |   | * | * | * | * | * | * | * |\n");
+        printf("1 |   |   |   |   |   |   | * | * | * | * | \n");
+        printf("2 |   |   |   |   |   | * | * | * | * | * | \n");
+        printf("3 |   |   |   |   | * | * | * | * | * | * | \n");
+        printf("4 |   |   |   |   |   |   |   | * | * | * | \n");
+        printf("5 |   |   |   |   |   |   |   |   | * | * | \n");
+        printf("\n");
         printf("1 - Deus da Guerra dos games?\n");
+        printf("2 - Maior encanador dos games?\n");
+        printf("3 - Personagem Principal do jogo Zelda?\n");
+        printf("4 - Personagem iconico com poder do fogo do inferno de Mortal Kombat\n");
+        printf("5 - personagem negao mais foda de uma das maiores franquias de Games!\n");
+        printf("\n");
 
-        printf("Qual a sua resposta?\n");
-        scanf("%s", &resposta);
+        printf("Qual sua escolha?");
+        scanf("%d", &escolha);
 
+        switch (escolha)
+        {
+            case 1:
+                do
+                {
+                    novamente = 0;
 
+                    printf("1 - Deus da Guerra dos games?\n");
+                    printf("\n");
+                    printf("1 |   |   |   |   |   |   | * | * | * | * | * | * | * |\n");
+                    printf("\n");
+                    printf("Qual a sua resposta?\n");
+                    scanf("%s", &resposta);
 
-        break;
-    
-    default:
-        break;
+                    resultado = strcmp(resposta,palavras[0]);
+
+                    if (resultado == 0)
+                    {
+                        printf("\n");
+                        printf("Parabens! Voce acertou! a palavra realmente era Kratos!\n");
+                      
+                    }else{
+                        printf("Que pena, voce errou, deseja tentar novamente?\n");
+                        printf("1 - Sim\n");
+                        printf("2 - Nao\n");
+                        fflush(stdin);
+                        scanf("%d" , &novamente);
+                    }
+                    
+                }while (novamente == 1);
+            break;
+
+            case 2:
+                do
+                {
+                    novamente = 0;
+
+                    printf("2 - Maior encanador dos games?\n");
+                    printf("\n");
+                    printf("2 |   |   |   |   |   | * | * | * | * | * | \n");
+                    printf("\n");
+                    printf("Qual a sua resposta?\n");
+                    scanf("%s", &resposta);
+
+                    resultado = strcmp(resposta,palavras[1]);
+
+                    if (resultado == 0)
+                    {
+                        printf("\n");
+                        printf("Parabens! Voce acertou! a palavra realmente era Mario!\n");
+                  
+                    }else{
+                        printf("Que pena, voce errou, deseja tentar novamente?\n");
+                        printf("1 - Sim\n");
+                        printf("2 - Nao\n");
+                        fflush(stdin);
+                        scanf("%d" , &novamente);
+                    }  
+                } while (novamente == 1);
+            break;
+            
+            case 3:
+                do
+                {
+                    novamente = 0;
+
+                    printf("3 - Personagem Principal do jogo Zelda?\n");
+                    printf("\n");
+                    printf("3 |   |   |   |   | * | * | * | * | * | * | \n");
+                    printf("\n");
+                    printf("Qual a sua resposta?\n");
+                    scanf("%s", &resposta);
+
+                    resultado = strcmp(resposta,palavras[2]);
+
+                    if (resultado == 0)
+                    {
+                        printf("\n");
+                        printf("Parabens! Voce acertou! a palavra realmente era Link!\n");
+                       
+                    }else{
+                        printf("Que pena, voce errou, deseja tentar novamente?\n");
+                        printf("1 - Sim\n");
+                        printf("2 - Nao\n");
+                        fflush(stdin);
+                        scanf("%d" , &novamente);
+                    }
+                    
+                }while (novamente == 1);
+            break;
+
+            case 4:
+                do
+                {
+                    novamente = 0;
+
+                    printf("4 - Personagem iconico com poder do fogo do inferno de Mortal Kombat\n");
+                    printf("\n");
+                    printf("4 |   |   |   |   |   |   |   | * | * | * | \n");
+                    printf("\n");
+                    printf("Qual a sua resposta?\n");
+                    scanf("%s", &resposta);
+
+                    resultado = strcmp(resposta,palavras[3]);
+
+                    if (resultado == 0)
+                    {
+                        printf("\n");
+                        printf("Parabens! Voce acertou! a palavra realmente era Scorpion!\n");
+                     
+                    }else{
+                        printf("Que pena, voce errou, deseja tentar novamente?\n");
+                        printf("1 - Sim\n");
+                        printf("2 - Nao\n");
+                        fflush(stdin);
+                        scanf("%d" , &novamente);
+                    }
+                    
+                }while (novamente == 1);
+            break;
+
+            case 5:
+                do
+                {
+                    novamente = 0;
+
+                    printf("5 - personagem negao mais foda de uma das maiores franquias de Games!\n");
+                    printf("\n");
+                    printf("5 |   |   |   |   |   |   |   |   | * | * | \n");
+                    printf("\n");
+                    printf("Qual a sua resposta?\n");
+                    scanf("%s", &resposta);
+
+                    resultado = strcmp(resposta,palavras[4]);
+
+                    if (resultado == 0)
+                    {
+                        printf("\n");
+                        printf("Parabens! Voce acertou! a palavra realmente era Franklin!\n");
+
+                    }else{
+                        printf("Que pena, voce errou, deseja tentar novamente?\n");
+                        printf("1 - Sim\n");
+                        printf("2 - Nao\n");
+                        fflush(stdin);
+                        scanf("%d" , &novamente);
+                    }
+                    
+                }while (novamente == 1);
+            break;
+        }
     }
 }
+
