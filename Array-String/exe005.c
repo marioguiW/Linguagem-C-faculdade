@@ -7,19 +7,29 @@ int main(){
 
     char palavra[20];
     char palavraInvertida[20];
+    int inverter = 0;
 
     printf("Digite a palavra para saber se eh um palindromo : \n");
     gets(palavra);
 
-    for (int i = 0; palavra[i] == "\0"; i++)
+    for (int i = 19; i > -1; i--)
     {
-        for (int j = 0; j < i; i--)
+        int j = 0;
+        while (j == 0)
         {
-            
+            palavraInvertida[inverter] = palavra[i];
+            j = 1;
         }
-        
     }
+
+    printf("%s", palavraInvertida);
     
+    // if (palavraInvertida == palavra)
+    // {
+    //     printf("Esta palavra eh um Palindromo!");
+    // }else{
+    //     printf("Esta palavra NAO eh um Palindromo!");
+    // }
     
 
 }
