@@ -1,0 +1,20 @@
+Filme : Mario
+Sala : 1
+Horario : 19:30
+Preco : 22.00
+
+Filme : Sonic
+Sala : 2
+Horario : 15:40
+Preco : 17.50
+
+Filme : Piratas do Caribe
+Sala : 3
+Horario : 17:30
+Preco : 18.50
+
+Filme : Top Gun
+Sala : 4
+Horario : 13:50
+Preco : 25.00
+
