@@ -8,5 +8,7 @@ int main(){
         char nome[20];
         char curso[15];
     }aluno[5];
+
+    printf
     
 }
