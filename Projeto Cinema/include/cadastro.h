@@ -18,7 +18,7 @@ int cadastro(){
     return optionCadastro;
 }
 
-int cadastro_filmes(char nome[20], char hora[10], float preco){
+int cadastro_filmes(char nome[30], char hora[10], float *preco){
 
     
 
@@ -32,9 +32,8 @@ int cadastro_filmes(char nome[20], char hora[10], float preco){
     fflush(stdin);
 
     printf("Digite o preco do ingresso: ");
-    scanf("%f", &preco);
+    scanf("%f", preco);
     fflush(stdin);
-
 
     return nome,hora,preco;
 }

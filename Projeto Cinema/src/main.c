@@ -15,7 +15,7 @@ int main(){
 
     struct informacoes
     {
-        char nome__filme[20];
+        char nome__filme[30];
         char horario[10];
         float preco;
     } tabela[5];
@@ -48,36 +48,47 @@ int main(){
         case 1:
             do
             {
-                printf("teste");
+                system("cls");
+                cinema = fopen("cinemav0.txt", "r");
                 optionCadastro = cadastro();
                 fflush(stdin);
 
                 switch (optionCadastro)
                 {
                 case 1:
+                    fclose(cinema);
+
+                    system("cls");
+
                     cinema = fopen("cinemaV0.txt", "a");
 
-                    cadastro_filmes(tabela[i].nome__filme, tabela[i].horario, tabela[i].preco);
-
-                    printf("teste");
+                    cadastro_filmes(tabela[i].nome__filme, tabela[i].horario, &tabela[i].preco);
                     
-                    fprintf("\n%s\n%s\n%f", tabela[i].nome__filme,tabela[i].horario, tabela[i].preco);
+                    fprintf(cinema, "\n%s\n%s\n%.2f,\n", tabela[i].nome__filme,tabela[i].horario, tabela[i].preco);
+
+                    fclose(cinema);
+
+                    system("cls");
+
+                    printf("> Filme cadastrado com sucesso\n\n");
 
                     break;
                 case 2:
+                    system("cls");
+                    cinema = fopen("cinemav0.txt", "r");
+
                     listar_filmes(cinema);
+                    scanf("%d", &option);
 
                     break;
                 case 6:
+                    system("cls");
                     break;
                 
                 }
-
             }while(optionCadastro != 6);
+        break;
 
-    
-        
-        
         case 6:
             break;
         }
