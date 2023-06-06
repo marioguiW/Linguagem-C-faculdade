@@ -17,3 +17,8 @@ Filme : Top Gun
 Sala : 4
 Horario : 13:50
 Preco : 25.00
+
+
+Piratas do caribe
+21:30
+19.90
