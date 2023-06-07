@@ -31,49 +31,29 @@ int listaFilmePorNome(FILE *arquivo_txt_cinema){
 
     printf("========== Procurar Filme por Nome ==========\n");
     printf("Digite o nome do filme: ");
-    gets(nomeFilme);
+    fgets(nomeFilme,30,stdin);
 
+    char exemplo[50] = "Nome do filme: ";
+
+    strcat(exemplo, nomeFilme);
+    
+
+    int fodase;
     int contadora = 0;
     int linha;
     char line[100];
+
+    while(fgets(linha,100,arquivo_txt_cinema) != NULL){
+        if (strncmp(line, exemplo, 40) == 0){
+            break;
+        }
+        contadora++;
         
+    }
 
-    // while(fgets(line,100, arquivo_txt_cinema) != NULL){
-    //     printf("teste1");
-    //     if(strncmp(line, "Nome do filme:", 14) == 0){
-    //         printf("teste2");
-    //         char filmeExistente[30];
-    //         if (sscanf(line, "Nome do filme: %29s", filmeExistente) == 1){
-    //             printf("teste3");
-    //             if (strcmp(nomeFilme, filmeExistente) == 0)
-    //             {
-    //                 printf("%s", nomeFilme);
+    printf("%d", contadora);
+    printf("lalalala");
+    scanf("%d", &fodase);
 
-    //                 printf("%s", filmeExistente);
-    //             }           
-    //         }
-    //     }
-    //     contadora++;
-    // }
-    fclose(arquivo_txt_cinema);
-    return linha;
 }
 
-// int ler_ultimo_id_cliente() {
-
-//     FILE *clientes = fopen("clienteV0.txt", "r");
-//     if (clientes == NULL) {
-//     printf("Erro na abertura do arquivo!\n");
-//     return 0;
-//     }
-
-//     int ultimo_id = 0;
-//     char line[100];
-//     while (fgets(line, 100,clientes) != NULL) {
-//         if (strncmp(line, "id :", 4) == 0) { //compara se os primeiros 4 caracteres da linha são == "id :"
-//             int id;
-//             if (sscanf(line, "id : %d", &id) == 1) { //sscanf lê o elemento de uma array e incrementa em outra
-//                 ultimo_id = id; //atribuindo sempre o ultimo "id : <valor>" a variavel id
-//             }
-//         }
-//     }

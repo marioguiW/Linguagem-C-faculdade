@@ -1,4 +1,6 @@
 
+
+
 id : 1
 Nome do filme: Branca de Neve
 Horario : 19:15
@@ -13,8 +15,6 @@ id : 4
 Nome do filme: Star wars
 Horario : 16:15
 Preco : 20.00,
-
-
 
 id : 1
 Nome do filme: Titanic
@@ -138,9 +138,7 @@ Preco : 17.00,
 
 id : 6
 Nome do filme: Maze Runner
-
 Horario : 21:20
-
 Preco : 24.00,
 
 id : 7
@@ -169,7 +167,7 @@ Horario : 19:00
 Preco : 22.00,
 
 id : 12
-Nome do filme: Minios 2
+Nome do filme: Minions 2
 Horario : 14:55
 Preco : 17.00;
 

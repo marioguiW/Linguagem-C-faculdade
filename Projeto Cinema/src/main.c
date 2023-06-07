@@ -136,6 +136,7 @@ int main(){
                     listar_filmes(cinema);
                     fclose(cinema);
                     break;
+
                 case 2:
                     system("cls");
                     cinema = fopen("cinemaV0.txt", "r");
@@ -147,6 +148,16 @@ int main(){
                     }
 
                     break;
+                case 3:
+                    fclose(clientes);
+                    system("cls");
+                    clientes = fopen("clienteV0.txt", "r");
+              
+                    listar_clientes(clientes);
+                    fclose(clientes);
+
+                    break;
+
 
                 case 5:
                     system("cls");
@@ -157,9 +168,7 @@ int main(){
                 }
 
 
-            } while(optionCadastro != 6);
-            
-
+            } while(optionConsultas != 6);
             break;
 
         case 6:
