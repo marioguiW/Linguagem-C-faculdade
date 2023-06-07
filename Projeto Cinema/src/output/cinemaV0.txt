@@ -158,3 +158,18 @@ Nome do filme: O advogado do diabo
 Horario : 20:00
 Preco : 20.00,
 
+id : 10
+Nome do filme: A branca de neve
+Horario : 18:00
+Preco : 20.00,
+
+id : 11
+Nome do filme: De volta para o futuro
+Horario : 19:00
+Preco : 22.00,
+
+id : 12
+Nome do filme: Minios 2
+Horario : 14:55
+Preco : 17.00;
+

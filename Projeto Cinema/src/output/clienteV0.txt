@@ -1,4 +1,12 @@
 id : 1
 Nome do cliente: Willian Torrente
-Idade do cliente: 34
+Idade do cliente: 34;
+
+id : 2
+Nome do cliente: Heloisa
+Idade do cliente: 15;
+
+id : 3
+Nome do cliente: Juliana
+Idade do cliente: 16;
 

@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <string.h>
 #include "../include/cadastro.h"
+#include "../include/consultas.h"
 
 int main(){
     
-    FILE *cinema = fopen("cinemaV0.txt", "r");
+    FILE *cinema;
+    cinema = fopen("cinemaV0.txt", "r");
 
     FILE *clientes;
     clientes = fopen("clienteV0.txt", "r");
@@ -17,6 +19,7 @@ int main(){
     int i = 0;
     int option = 0;
     int optionCadastro = 0;
+    int optionConsultas = 0;
 
     fclose(cinema);
 
@@ -43,7 +46,8 @@ int main(){
             system("cls");
             do
             {
-                cinema = fopen("cinemav0.txt", "r");
+                fclose(cinema);
+                cinema = fopen("cinemaV0.txt", "r");
                 optionCadastro = cadastro();
                 fflush(stdin);
 
@@ -55,7 +59,7 @@ int main(){
                     cinema = fopen("cinemaV0.txt", "a");
 
 
-                    int ultimoId = ler_ultimo_id();
+                    int ultimoId = ler_ultimo_id_cinema();
 
                     informacoesCinema filme = cadastro_filmes(ultimoId);
 
@@ -63,7 +67,7 @@ int main(){
                     fprintf(cinema, "id : %d\n", filme.id);
                     fprintf(cinema, "Nome do filme: %s\n", filme.nome_filme);
                     fprintf(cinema, "Horario : %s\n", filme.horario);
-                    fprintf(cinema, "Preco : %.2f,\n\n", filme.preco);
+                    fprintf(cinema, "Preco : %.2f;\n\n", filme.preco);
 
                     fclose(cinema);
                     system("cls");
@@ -79,21 +83,24 @@ int main(){
                     fclose(cinema);
                     break;
                 case 3:
-                    // fclose(clientes);
-                    // system("cls");
 
-                    // cadastro_clientes();
+                    fclose(clientes);
+                    system("cls");
+                    clientes = fopen("clienteV0.txt", "a");
 
-                    // clientes = fopen("clienteV0.txt", "a");
+                    int ultimoIdCliente = ler_ultimo_id_cliente();
 
-                    // fprintf(clientes,"id : %d\n", tabelaClientes[i].id);
-                    // fprintf(clientes,"Nome do cliente: %s\n", tabelaClientes[i].nome__cliente);
-                    // fprintf(clientes,"Idade do cliente: %d\n\n", tabelaClientes[i].idade);
+                    informacoesCliente cliente = cadastro_cliente(ultimoIdCliente);
 
-                    // fclose(clientes);
-                    // system("cls");
-                    // printf("> Cliente cadastrado com sucesso\n\n");
-                    // break;
+                    fprintf(clientes,"id : %d\n", cliente.id);
+                    fprintf(clientes,"Nome do cliente: %s", cliente.nome_cliente);
+                    fprintf(clientes,"Idade do cliente: %d;\n\n", cliente.idade);
+
+                    fclose(clientes);
+                    system("cls");
+                    printf("> Cliente cadastrado com sucesso\n\n");
+                    break;
+                    
                 case 4:
                     fclose(clientes);
                     system("cls");
@@ -113,6 +120,47 @@ int main(){
                 }
             }while(optionCadastro != 6);
         break;
+        case 2:
+            system("cls");
+            do
+            {
+                fclose(cinema);
+                optionConsultas = consultas();
+                fflush(stdin);
+
+                switch (optionConsultas)
+                {
+                case 1:
+                    system("cls");
+                    cinema = fopen("cinemaV0.txt", "r");
+                    listar_filmes(cinema);
+                    fclose(cinema);
+                    break;
+                case 2:
+                    system("cls");
+                    cinema = fopen("cinemaV0.txt", "r");
+                    int linha = listaFilmePorNome(cinema);
+                    if (linha != -1) {
+                        printf("O filme foi encontrado na linha: %d\n", linha);
+                    } else {
+                        printf("O filme nao foi encontrado.\n");
+                    }
+
+                    break;
+
+                case 5:
+                    system("cls");
+                    break;
+                case 6:
+                    system("cls");
+                    break;
+                }
+
+
+            } while(optionCadastro != 6);
+            
+
+            break;
 
         case 6:
             break;

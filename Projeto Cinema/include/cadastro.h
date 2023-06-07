@@ -20,7 +20,7 @@ int cadastro(){
     return optionCadastro;
 }
 
-int ler_ultimo_id() {
+int ler_ultimo_id_cinema() {
 
     FILE *cinema = fopen("cinemaV0.txt", "r");
     if (cinema == NULL) {
@@ -43,7 +43,28 @@ int ler_ultimo_id() {
     return ultimo_id;
 }
 
+int ler_ultimo_id_cliente() {
 
+    FILE *clientes = fopen("clienteV0.txt", "r");
+    if (clientes == NULL) {
+    printf("Erro na abertura do arquivo!\n");
+    return 0;
+    }
+
+    int ultimo_id = 0;
+    char line[100];
+    while (fgets(line, 100,clientes) != NULL) {
+        if (strncmp(line, "id :", 4) == 0) { //compara se os primeiros 4 caracteres da linha são == "id :"
+            int id;
+            if (sscanf(line, "id : %d", &id) == 1) { //sscanf lê o elemento de uma array e incrementa em outra
+                ultimo_id = id; //atribuindo sempre o ultimo "id : <valor>" a variavel id
+            }
+        }
+    }
+
+    fclose(clientes);
+    return ultimo_id;
+}
 
 typedef struct 
 {
@@ -52,6 +73,14 @@ typedef struct
     char *horario;
     float preco;
 } informacoesCinema;
+
+typedef struct
+{
+    int id;
+    char *nome_cliente;
+    int idade;
+} informacoesCliente;
+
 
 
 informacoesCinema cadastro_filmes(int id){
@@ -69,7 +98,7 @@ informacoesCinema cadastro_filmes(int id){
     fgets(nome,30,stdin);
 
     printf("Digite o horario do filme: ");
-    fgets(hora,10,stdin);
+    fgets(hora,30,stdin);
 
     printf("Digite o preco do ingresso: ");
     scanf("%f", &preco);
@@ -78,7 +107,6 @@ informacoesCinema cadastro_filmes(int id){
     int length_hora = strlen(hora);
 
     if(nome[length_nome-1] && hora[length_hora-1] == '\n'){
-        printf("teste");
         nome[length_nome-1] = '\0';
         hora[length_hora-1] = '\0';
     }
@@ -98,6 +126,7 @@ informacoesCinema cadastro_filmes(int id){
     return dadosCinema;
 }
 
+
 int listar_filmes(FILE *arquivo_txt_cinema){
     char tudo[100];
 
@@ -106,20 +135,35 @@ int listar_filmes(FILE *arquivo_txt_cinema){
     }
 }
 
-int cadastro_clientes(int *id, char nome[30], int *idade){
-    printf("========= Cadastro de Cliente =========\n");
+informacoesCliente cadastro_cliente(int id){
+    int idCliente = id;
+    char *nome_cliente;
+    int idade;
 
-    fflush(stdin);
-    *id = 1;
-
+    printf("> Abaixo preencha dados do cliente a ser cadastrado no sistema\n\n\n");
+    printf("======== Cadastro de Clientes ========\n");
     printf("Digite o nome do cliente: ");
-    gets(nome);
-    fflush(stdin);
+    fgets(nome_cliente,30,stdin);
 
     printf("Digite a idade do cliente: ");
-    scanf("%d", idade);
+    scanf("%d", &idade);
 
-    return id,nome,idade;
+    int length = strlen(nome_cliente);
+
+    if (nome_cliente[length-1] == '\n' )
+    {
+        nome_cliente[length-1] == '\0';
+    }
+
+    idCliente = idCliente + 1;
+    
+    informacoesCliente dadosCliente;
+    dadosCliente.id = idCliente;
+    dadosCliente.nome_cliente = malloc(strlen(nome_cliente) + 1);
+    strcpy(dadosCliente.nome_cliente, nome_cliente);
+    dadosCliente.idade = idade;
+
+    return dadosCliente;
 }
 
 int listar_clientes(FILE *arquivo_txt_clientes){
