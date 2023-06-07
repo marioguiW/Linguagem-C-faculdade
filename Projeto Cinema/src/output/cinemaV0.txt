@@ -148,3 +148,13 @@ Nome do filme: Piratas do Caribe
 Horario : 22:30
 Preco : 22.00,
 
+id : 8
+Nome do filme: Ironman 3
+Horario : 13:15
+Preco : 12.00,
+
+id : 9
+Nome do filme: O advogado do diabo
+Horario : 20:00
+Preco : 20.00,
+
