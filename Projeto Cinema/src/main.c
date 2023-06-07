@@ -4,9 +4,7 @@
 
 int main(){
     
-
-    FILE *cinema;
-    cinema = fopen("cinemaV0.txt", "r");
+    FILE *cinema = fopen("cinemaV0.txt", "r");
 
     FILE *clientes;
     clientes = fopen("clienteV0.txt", "r");
@@ -15,21 +13,6 @@ int main(){
         printf("Erro na abertura do arquivo!");
         return 1;
     }
-
-    struct informacoesCinema
-    {
-        int id;
-        char nome__filme[30];
-        char horario[10];
-        float preco;
-    } tabela[10];
-
-    struct informacoesClientes
-    {
-        int id;
-        char nome__cliente[30];
-        int idade;
-    } tabelaClientes[10];
     
     int i = 0;
     int option = 0;
@@ -71,12 +54,16 @@ int main(){
                     system("cls");
                     cinema = fopen("cinemaV0.txt", "a");
 
-                    cadastro_filmes(&tabela[i].id,tabela[i].nome__filme, tabela[i].horario, &tabela[i].preco);
+
+                    int ultimoId = ler_ultimo_id();
+
+                    informacoesCinema filme = cadastro_filmes(ultimoId);
+
                     
-                    fprintf(cinema, "id : %d\n", tabela[i].id);
-                    fprintf(cinema, "Nome do filme: %s\n", tabela[i].nome__filme);
-                    fprintf(cinema, "Horario : %s\n", tabela[i].horario);
-                    fprintf(cinema, "Preco : %.2f,\n\n", tabela[i].preco);
+                    fprintf(cinema, "id : %d\n", filme.id);
+                    fprintf(cinema, "Nome do filme: %s\n", filme.nome_filme);
+                    fprintf(cinema, "Horario : %s\n", filme.horario);
+                    fprintf(cinema, "Preco : %.2f,\n\n", filme.preco);
 
                     fclose(cinema);
                     system("cls");
@@ -92,21 +79,21 @@ int main(){
                     fclose(cinema);
                     break;
                 case 3:
-                    fclose(clientes);
-                    system("cls");
+                    // fclose(clientes);
+                    // system("cls");
 
-                    cadastro_clientes(&tabelaClientes[i].id, tabelaClientes[i].nome__cliente, &tabelaClientes[i].idade);
+                    // cadastro_clientes();
 
-                    clientes = fopen("clienteV0.txt", "a");
+                    // clientes = fopen("clienteV0.txt", "a");
 
-                    fprintf(clientes,"id : %d\n", tabelaClientes[i].id);
-                    fprintf(clientes,"Nome do cliente: %s\n", tabelaClientes[i].nome__cliente);
-                    fprintf(clientes,"Idade do cliente: %d\n\n", tabelaClientes[i].idade);
+                    // fprintf(clientes,"id : %d\n", tabelaClientes[i].id);
+                    // fprintf(clientes,"Nome do cliente: %s\n", tabelaClientes[i].nome__cliente);
+                    // fprintf(clientes,"Idade do cliente: %d\n\n", tabelaClientes[i].idade);
 
-                    fclose(clientes);
-                    system("cls");
-                    printf("> Cliente cadastrado com sucesso\n\n");
-                    break;
+                    // fclose(clientes);
+                    // system("cls");
+                    // printf("> Cliente cadastrado com sucesso\n\n");
+                    // break;
                 case 4:
                     fclose(clientes);
                     system("cls");

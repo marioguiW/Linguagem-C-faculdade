@@ -4,3 +4,147 @@ Nome do filme: Branca de Neve
 Horario : 19:15
 Preco : 16.50,
 
+id : 2
+Nome do filme: Mari
+Horario : 19:00
+Preco : 25.00,
+
+id : 4
+Nome do filme: Star wars
+Horario : 16:15
+Preco : 20.00,
+
+
+
+id : 1
+Nome do filme: Titanic
+Horario : 14:45
+Preco : 14.00,
+
+id : 1
+Nome do filme: Titanic 2
+Horario : 16:50
+Preco : 26.00,
+
+id : 1
+Nome do filme: ereererer
+Horario : 12313
+Preco : 111121.00,
+
+id : 1
+Nome do filme: ttyttyytyyutt
+Horario : ereere
+Preco : 0.00,
+
+id : 1
+Nome do filme: ttredfssawefdd
+Horario : 1254221
+Preco : 12554.00,
+
+id : 1
+Nome do filme: teste1
+Horario : 1243
+Preco : 1243.00,
+
+id : 1
+Nome do filme: teste2
+Horario : 1234
+Preco : 1234.00,
+
+id : 10
+Nome do filme: teste4
+Horario : 4352
+Preco : 5243.00,
+
+id : 10
+Nome do filme: teste5
+Horario : 1324
+Preco : 1423.00,
+
+id : 1
+Nome do filme: teste78
+Horario : 5487
+Preco : 9856.00,
+
+id : 2
+Nome do filme: asddertf
+Horario : 4545
+Preco : 47854.00,
+
+id : 3
+Nome do filme: teste45434
+Horario : 55266
+Preco : 66655.00,
+
+id : 4
+Nome do filme: hfgfghfhgfd
+Horario : 3454564
+Preco : 5454.00,
+
+id : 1
+Nome do filme: gccgcghc
+Horario : cfcfcfg
+Preco : 0.00,
+
+id : 2
+Nome do filme: hgggh
+Horario : jjhjh
+Preco : 0.00,
+
+id : 1
+Nome do filme: rrttgfddfghhggffdsdf
+Horario : 234456677
+Preco : 898.00,
+
+id : 1
+Nome do filme: 112233
+Horario : 1223
+Preco : 12233.00,
+
+id : 1
+Nome do filme: teste
+Horario : 23242
+Preco : 1525.00,
+
+id : 1
+Nome do filme: twree
+Horario : 2443
+Preco : 2263.00,
+
+id : 1
+Nome do filme: teste
+Horario : 1
+Preco : 1.00,
+
+id : 2
+Nome do filme: sdsdsfd
+Horario : 5445
+Preco : 4545.00,
+
+id : 3
+Nome do filme: fsdfsd
+Horario : 1dfsdf
+Preco : 1255.00,
+
+id : 4
+Nome do filme: cbsdhdbsdhj
+Horario : 112
+Preco : 1515.00,
+
+id : 5
+Nome do filme: Procurando Nemo
+Horario : 12:30
+Preco : 17.00,
+
+id : 6
+Nome do filme: Maze Runner
+
+Horario : 21:20
+
+Preco : 24.00,
+
+id : 7
+Nome do filme: Piratas do Caribe
+Horario : 22:30
+Preco : 22.00,
+
