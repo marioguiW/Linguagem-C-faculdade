@@ -139,13 +139,8 @@ int main(){
 
                 case 2:
                     system("cls");
-                    cinema = fopen("cinemaV0.txt", "r");
-                    int linha = listaFilmePorNome(cinema);
-                    if (linha != -1) {
-                        printf("O filme foi encontrado na linha: %d\n", linha);
-                    } else {
-                        printf("O filme nao foi encontrado.\n");
-                    }
+                    const char *arquivo = "cinemaV0.txt";
+                    filtrar_por_nome();
 
                     break;
                 case 3:

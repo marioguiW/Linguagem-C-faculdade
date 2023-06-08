@@ -10,3 +10,15 @@ id : 3
 Nome do cliente: Juliana
 Idade do cliente: 16;
 
+id : 4
+Nome do cliente: Joao
+Idade do cliente: 19;
+
+id : 5
+Nome do cliente: Juliana OF
+Idade do cliente: 15;
+
+id : 6
+Nome do cliente: Mario Gui
+Idade do cliente: 17;
+
