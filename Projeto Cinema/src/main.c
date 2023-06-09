@@ -21,6 +21,8 @@ int main(){
     int optionCadastro = 0;
     int optionConsultas = 0;
 
+    const char *arquivo = "cinemaV0.txt";
+
     fclose(cinema);
 
     do
@@ -140,7 +142,7 @@ int main(){
                 case 2:
                     system("cls");
                     const char *arquivo = "cinemaV0.txt";
-                    filtrar_por_nome();
+                    filtrar_filme_por_nome();
 
                     break;
                 case 3:
@@ -152,7 +154,12 @@ int main(){
                     fclose(clientes);
 
                     break;
+                case 4:
+                    system("cls");
+                    const char *arquivo2 = "clienteV0.txt";
+                    filtrar_cliente_por_nome();
 
+                    break;
 
                 case 5:
                     system("cls");
