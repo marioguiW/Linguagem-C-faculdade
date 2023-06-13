@@ -2,6 +2,9 @@
 #include <string.h>
 #include "../include/cadastro.h"
 #include "../include/consultas.h"
+#include "../include/atualiza.h"
+#include "../include/venda.h"
+
 
 int main(){
     
@@ -20,6 +23,7 @@ int main(){
     int option = 0;
     int optionCadastro = 0;
     int optionConsultas = 0;
+    int optionAtualiza = 0;
 
     const char *arquivo = "cinemaV0.txt";
 
@@ -171,7 +175,30 @@ int main(){
 
 
             } while(optionConsultas != 6);
-            break;
+        break;
+
+        case 3:
+            system("cls");
+            do
+            {
+                fclose(cinema);
+                fclose(clientes);
+
+                optionAtualiza = atualiza();
+
+                switch (optionAtualiza)
+                {
+                case 1:
+                    system("cls");
+                    atualizar_cadastro_filmes();
+                    break;
+                
+                default:
+                    system("cls");
+                    break;
+                }
+            } while (optionAtualiza != 6);
+            
 
         case 6:
             break;

@@ -1,75 +1,16 @@
 id : 1
-Nome do filme: teste
-Horario : 1
-Preco : 1.00,
+Nome do filme: Carros 3
+Horario : 12
+Preco : 14.00
+
 
 id : 2
-Nome do filme: sdsdsfd
-Horario : 5445
-Preco : 4545.00,
+Nome do filme: Ghostrider 2
+Horario : 20
+Preco : 24.00
 
 id : 3
-Nome do filme: fsdfsd
-Horario : 1dfsdf
-Preco : 1255.00,
-
-id : 4
-Nome do filme: cbsdhdbsdhj
-Horario : 112
-Preco : 1515.00,
-
-id : 5
-Nome do filme: Procurando Nemo
-Horario : 12:30
-Preco : 17.00,
-
-id : 6
-Nome do filme: Maze Runner
-Horario : 21:20
-Preco : 24.00,
-
-id : 7
-Nome do filme: Piratas do Caribe
-Horario : 22:30
-Preco : 22.00,
-
-id : 8
-Nome do filme: Ironman 3
-Horario : 13:15
-Preco : 12.00,
-
-id : 9
-Nome do filme: O advogado do diabo
-Horario : 20:00
-Preco : 20.00,
-
-id : 10
-Nome do filme: A branca de neve
-Horario : 18:00
-Preco : 20.00,
-
-id : 11
-Nome do filme: De volta para o futuro
-Horario : 19:00
-Preco : 22.00,
-
-id : 12
-Nome do filme: Minions 2
-Horario : 14:55
-Preco : 17.00;
-
-id : 13
-Nome do filme: Bob 
-Horario : 17:00
-Preco : 30.00;
-
-id : 14
-Nome do filme: Sonic
-Horario : 19:00
-Preco : 13.90;
-
-id : 15
-Nome do filme: As branquelas
-Horario : 16:45
-Preco : 12.00;
+Nome do filme: as branquelas 2
+Horario : 15
+Preco : 14.00
 
