@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <locale.h>
 
 #define MAX_LINE_LENGTH 1000
 
 int venda(){
+
     int optionVenda;
+
+
+    logo();
 
     printf("============= Venda de Ingressos =============\n");
     printf("| [1] Filmes, Horarios e Precos              |\n");
@@ -24,7 +29,7 @@ int venda(){
 void mostra_ticket() {
     int idCliente;
     int idFilme;
-
+    printf("> Abaixo digite o id do cliente e o id do filme\n\n\n\n");
     printf("============= Venda de Ingressos =============\n");
     printf("Digite o ID do cliente: ");
     scanf("%d", &idCliente);
@@ -50,6 +55,8 @@ void mostra_ticket() {
     char nomeCliente[50];
     char nomeFilme[50];
     float precoFilme = 0.0;
+    int idadeCliente = 0;
+    int pagamento;
 
     // Busca as informações do cliente pelo ID
     while (fgets(linha, sizeof(linha), fileClientes) != NULL) {
@@ -60,6 +67,8 @@ void mostra_ticket() {
                 encontrouCliente = 1;
                 fgets(linha, sizeof(linha), fileClientes);  // Pula a linha do Nome do cliente
                 sscanf(linha, "Nome do cliente: %[^\n]", nomeCliente);
+                fgets(linha, sizeof(linha), fileClientes);
+                sscanf(linha,"Idade do cliente: %d", &idadeCliente);
                 break;
             }
         }
@@ -86,16 +95,47 @@ void mostra_ticket() {
     fclose(fileCinema);
 
     if (!encontrouCliente) {
-        printf("Nenhum cliente encontrado com o ID especificado.\n");
+        printf("\nNenhum cliente encontrado com o ID especificado.\n\n");
         return;
     }
 
     if (!encontrouFilme) {
-        printf("Nenhum filme encontrado com o ID especificado.\n");
+        printf("\nNenhum filme encontrado com o ID especificado.\n\n");
         return;
     }
 
-    printf("\nNome: %s\n", nomeCliente);
-    printf("Filme: %s\n", nomeFilme);
-    printf("Valor: %.2f\n", precoFilme);
+    float meiaEntrada = precoFilme / 2;
+
+    
+    printf("\n=============== Dados da compra ==============\n");
+    printf("| Nome: %s\n", nomeCliente);
+    printf("| Idade: %d\n", idadeCliente);
+    printf("| Filme: %s\n", nomeFilme);
+    printf("| Meia Entrada: R$ %.2f\n", meiaEntrada);
+    printf("| Inteira: R$ %.2f\n", precoFilme);
+    printf("|\n");
+    if (idadeCliente >=18)
+    {
+        printf("| Voce paga inteira!\n");
+    }else if (idadeCliente < 18)
+    {
+        printf("| Voce paga meia entrada!\n");
+    }
+    
+    printf("==============================================\n");
+    printf("\n");
+
+    printf("\n============= Continunando Compra ============\n");
+    if(idadeCliente >= 18){
+        printf("| Total a pagar: R$ %.2f\n", precoFilme);
+    }else if(idadeCliente < 18){
+        printf("| Total a pagar: R$ %.2f\n", meiaEntrada);
+    }
+    printf("| Escolha a forma de pagamento:\n\n");
+    printf("| [1] A vista\n");
+    printf("| [2] Credito\n");
+    printf("%c%c%c%c\n%c\n%c\n%c\n%c%c%c%c\n",219,219,219,219,219,219,219,219,219,219,219);
+    
+    scanf("\nDigite a opcao: %d", &pagamento);
+
 }

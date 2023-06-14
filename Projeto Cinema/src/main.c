@@ -1,13 +1,26 @@
 #include <stdio.h>
 #include <string.h>
+#include <locale.h>
 #include "../include/cadastro.h"
 #include "../include/consultas.h"
 #include "../include/atualiza.h"
 #include "../include/venda.h"
 
+void logo(){
+    printf("  %c------------------------------------%c\n",218,191);
+    printf("  | %c%c%c%c  %c  %c%c   %c %c%c%c%c %c%c   %c%c %c%c%c%c%c |\n",219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219,219);
+    printf("  | %c        %c %c  %c %c    %c %c %c %c %c   %c |\n",219,219,219,219,219,219,219,219,219,219);
+    printf("  | %c     %c  %c  %c %c %c%c%c%c %c  %c  %c %c%c%c%c%c |\n",219,219,219,219,219,219,219,219);
+    printf("  | %c     %c  %c   %c%c %c    %c     %c %c   %c |\n",219,219,219,219,219,219,219,219,219);
+    printf("  | %c%c%c%c  %c  %c    %c %c%c%c%c %c     %c %c   %c |\n",219,219,219,219,219,219,219,219,219,219,219,219);
+    printf("  %c------------------------------------%c",192,217);
+    printf("\n\n");
+}
+
+
 
 int main(){
-    
+
     FILE *cinema;
     cinema = fopen("cinemaV0.txt", "r");
 
@@ -33,6 +46,8 @@ int main(){
     do
     {
 
+        logo();
+
         int valor_tabela = 0;
 
         printf("=============== Cinema 1.0 ===============\n");
@@ -43,7 +58,7 @@ int main(){
         printf("|  [5] - Limpar a Tela                   |\n");
         printf("|  [6] - Sair                            |\n");
         printf("==========================================\n");
-        printf("Digite a opcao desejada: ");
+        printf("\nDigite a opcao desejada: ");
         scanf("%d", &option);
         fflush(stdin);
 

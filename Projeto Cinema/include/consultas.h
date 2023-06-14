@@ -7,6 +7,8 @@
 int consultas(){
     int optionConsultas;
 
+    logo();
+
     printf("================ Consultas ================\n");
     printf("|  [1] - Consultar Filmes e seus horarios |\n");
     printf("|  [2] - Procurar filme por nome          |\n");
@@ -15,7 +17,7 @@ int consultas(){
     printf("|  [5] - Limpar a Tela                    |\n");
     printf("|  [6] - VOLTAR                           |\n");
     printf("=========================================\n");
-    printf("Digite a opcao desejada: ");
+    printf("\nDigite a opcao desejada: ");
     scanf("%d", &optionConsultas);
 
     return optionConsultas;

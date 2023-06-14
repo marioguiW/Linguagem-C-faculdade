@@ -5,6 +5,8 @@
 int cadastro(){
 
     int optionCadastro = 0;
+    
+    logo();
 
     printf("=============== Cadastros ===============\n");
     printf("|  [1] - Cadastrar Filme                |\n");
@@ -14,7 +16,7 @@ int cadastro(){
     printf("|  [5] - Limpar a Tela                  |\n");
     printf("|  [6] - VOLTAR                         |\n");
     printf("=========================================\n");
-    printf("Digite a opcao desejada: ");
+    printf("\nDigite a opcao desejada: ");
     scanf("%d", &optionCadastro);
 
     return optionCadastro;

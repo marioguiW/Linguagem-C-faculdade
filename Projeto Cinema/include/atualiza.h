@@ -6,6 +6,7 @@
 
 int atualiza(){
     int optionAtualiza;
+    logo();
 
     printf("============== Atualizacoes ===============\n");
     printf("|  [1] - Atualizar dados de um Filme      |\n");
@@ -16,7 +17,7 @@ int atualiza(){
     printf("|  [6] - VOLTAR                           |\n");
     printf("===========================================\n");
 
-    printf("Digite a opcao desejada: ");
+    printf("\nDigite a opcao desejada: ");
     scanf("%d", &optionAtualiza);
 
     return optionAtualiza;
