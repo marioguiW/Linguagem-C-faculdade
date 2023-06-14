@@ -1,16 +1,20 @@
 id : 1
-Nome do filme: Carros 3
-Horario : 12
-Preco : 14.00
-
+Nome do filme: teste0 v2
+Horario : 20:00
+Preco : 22.00
 
 id : 2
-Nome do filme: Ghostrider 2
-Horario : 20
-Preco : 24.00
+Nome do filme: Carros
+Horario : 20:00
+Preco : 22.00
 
 id : 3
-Nome do filme: as branquelas 2
-Horario : 15
-Preco : 14.00
+Nome do filme: teste2 v0
+Horario : 19:00
+Preco : 22.00;
+
+id : 4
+Nome do filme: Jogos Vorazes
+Horario : 19:45
+Preco : 19.00;
 

@@ -131,7 +131,7 @@ int listar_filmes(FILE *arquivo_txt_cinema){
     char tudo[100];
 
     while(fgets(tudo,100,arquivo_txt_cinema) != NULL){
-        printf("| %s", tudo);
+        printf("%s", tudo);
     }
 }
 
@@ -171,7 +171,7 @@ int listar_clientes(FILE *arquivo_txt_clientes){
 
     while (fgets(tudo,100,arquivo_txt_clientes) != NULL)
     {
-        printf("| %s", tudo);
+        printf("%s", tudo);
     }
     
 }

@@ -24,6 +24,7 @@ int main(){
     int optionCadastro = 0;
     int optionConsultas = 0;
     int optionAtualiza = 0;
+    int optionVenda = 0;
 
     const char *arquivo = "cinemaV0.txt";
 
@@ -192,16 +193,71 @@ int main(){
                     system("cls");
                     atualizar_cadastro_filmes();
                     break;
-                
+                case 2:
+                    system("cls");
+                    excluir_filme_por_id();
+                    break;
+                case 3:
+                    system("cls");
+                    atualizar_cadastro_clientes();
+                    break; 
+                case 4:        
+                    system("cls");
+                    excluir_cliente_por_id();
+                    break;    
+                case 5:
+                    system("cls");
+                    break;
+                case 6:
+                    system("cls");
+                    break;   
                 default:
                     system("cls");
                     break;
                 }
             } while (optionAtualiza != 6);
+            break;
+        case 4:
+            system("cls");
+            do
+            {
+                optionVenda = venda();
+
+                switch (optionVenda)
+                {
+                case 1:
+                    system("cls");
+                    cinema = fopen("cinemaV0.txt", "r");
+                    listar_filmes(cinema);
+                    break;
+                case 2:
+                    system("cls");
+                    clientes = fopen("clienteV0.txt", "r");
+                    listar_clientes(clientes);
+                    break;
+                case 3:
+                    system("cls");
+                    mostra_ticket();
+                    break;
+                case 4:
+                    system("cls");
+                    break;
+                case 5:
+                    system("cls");
+                    break;
+                case 6:
+                    system("cls");
+                    break;
+                default:
+                    break;
+                }
+
+            } while (optionVenda != 6);
             
 
         case 6:
             break;
+
         }
     } while(option != 6);
     fclose(cinema);

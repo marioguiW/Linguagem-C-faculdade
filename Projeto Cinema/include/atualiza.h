@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX_LINE_LENGTH 1000
 
@@ -153,4 +154,92 @@ void atualizar_cadastro_clientes() {
     }
 
     fclose(file);
+}
+
+void excluir_cliente_por_id() {
+    FILE *file = fopen("clienteV0.txt", "r");
+    if (file == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
+    }
+
+    int id;
+    printf("Digite o ID do cliente que deseja excluir: ");
+    scanf("%d", &id);
+
+    FILE *tempFile = fopen("temp.txt", "w");
+    if (tempFile == NULL) {
+        printf("Erro ao criar arquivo temporário.\n");
+        fclose(file);
+        return;
+    }
+
+    char linha[MAX_LINE_LENGTH];
+    int encontrou = 0;
+
+    while (fgets(linha, MAX_LINE_LENGTH, file) != NULL) {
+        int linhaID;
+        sscanf(linha, "id : %d", &linhaID);
+        if (linhaID != id) {
+            fprintf(tempFile, "%s", linha);
+        } else {
+            encontrou = 1;
+        }
+    }
+
+    fclose(file);
+    fclose(tempFile);
+
+    if (!encontrou) {
+        printf("Nenhum cliente encontrado com o ID especificado.\n");
+        remove("temp.txt");
+    } else {
+        remove("clienteV0.txt");
+        rename("temp.txt", "clienteV0.txt");
+        printf("Cliente removido com sucesso!\n");
+    }
+}
+
+void excluir_filme_por_id() {
+    FILE *file = fopen("cinemaV0.txt", "r");
+    if (file == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
+    }
+
+    int id;
+    printf("Digite o ID do filme que deseja excluir: ");
+    scanf("%d", &id);
+
+    FILE *tempFile = fopen("temp.txt", "w");
+    if (tempFile == NULL) {
+        printf("Erro ao criar arquivo temporário.\n");
+        fclose(file);
+        return;
+    }
+
+    char linha[MAX_LINE_LENGTH];
+    int encontrou = 0;
+
+    while (fgets(linha, MAX_LINE_LENGTH, file) != NULL) {
+        int linhaID;
+        sscanf(linha, "id : %d", &linhaID);
+        if (linhaID != id) {
+            fprintf(tempFile, "%s", linha);
+        } else {
+            encontrou = 1;
+        }
+    }
+
+    fclose(file);
+    fclose(tempFile);
+
+    if (!encontrou) {
+        printf("Nenhum filme encontrado com o ID especificado.\n");
+        remove("temp.txt");
+    } else {
+        remove("cinemaV0.txt");
+        rename("temp.txt", "cinemaV0.txt");
+        printf("Filme removido com sucesso!\n");
+    }
 }
