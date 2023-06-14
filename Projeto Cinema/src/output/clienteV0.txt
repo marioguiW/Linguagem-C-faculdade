@@ -15,3 +15,7 @@ id : 6
 Nome do cliente: Mario Gui
 Idade do cliente: 17;
 
+id : 7
+Nome do cliente: juLIANA FURLAN
+Idade do cliente: 15;
+
