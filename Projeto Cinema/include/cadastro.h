@@ -8,7 +8,7 @@ int cadastro(){
     
     logo();
 
-    printf("=============== Cadastros ===============\n");
+    printf("==============* Cadastros *==============\n");
     printf("|  [1] - Cadastrar Filme                |\n");
     printf("|  [2] - Listar todos os filmes         |\n");
     printf("|  [3] - Cadastrar cliente              |\n");

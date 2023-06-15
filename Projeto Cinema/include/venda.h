@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <time.h>
 
 #define MAX_LINE_LENGTH 1000
 
@@ -57,6 +58,8 @@ void mostra_ticket() {
     float precoFilme = 0.0;
     int idadeCliente = 0;
     int pagamento;
+    int teste;
+    char horarioFilme[50];
 
     // Busca as informações do cliente pelo ID
     while (fgets(linha, sizeof(linha), fileClientes) != NULL) {
@@ -84,6 +87,7 @@ void mostra_ticket() {
                 fgets(linha, sizeof(linha), fileCinema);  // Pula a linha do Nome do filme
                 sscanf(linha, "Nome do filme: %[^\n]", nomeFilme);
                 fgets(linha, sizeof(linha), fileCinema);  // Pula a linha do Horario
+                sscanf(linha, "Horario : %[^\n]", horarioFilme);
                 fgets(linha, sizeof(linha), fileCinema);  // Lê a linha do Preco
                 sscanf(linha, "Preco : %f", &precoFilme);
                 break;
@@ -125,17 +129,59 @@ void mostra_ticket() {
     printf("==============================================\n");
     printf("\n");
 
-    printf("\n============= Continunando Compra ============\n");
+    printf("\n============= Continuando Compra ============\n");
     if(idadeCliente >= 18){
         printf("| Total a pagar: R$ %.2f\n", precoFilme);
     }else if(idadeCliente < 18){
         printf("| Total a pagar: R$ %.2f\n", meiaEntrada);
     }
-    printf("| Escolha a forma de pagamento:\n\n");
+    printf("| Escolha a forma de pagamento:\n");
+    printf("|\n");
     printf("| [1] A vista\n");
     printf("| [2] Credito\n");
-    printf("%c%c%c%c\n%c\n%c\n%c\n%c%c%c%c\n",219,219,219,219,219,219,219,219,219,219,219);
+    printf("|\n");
+    printf("=============================================\n");
+    printf("|Digite a opcao: ");
+    scanf("%d", &pagamento);
+
+
+    printf("\nProcessando.\n");
+    sleep(1);
+    printf("Processando..\n");
+    sleep(1);
+    printf("Processando...\n");
+    sleep(1);
+    printf("\n");
+    system("cls");
+
+    if (pagamento == 1)
+    {
+        printf("> Pagamento a vista concluido! \n\n");
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c|T|I|C|K|E|T|%c%c%c%c%c%c%c%c%c%c%c%c\n",201,205,205,205,205,205,205,203,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+        printf("%c %c %c%c%c Filme: %s\n", 186,219,221,219,186, nomeFilme);
+        printf("%c %c%c%c%c%c%c Horario da sessao: %s\n", 186,223,223,223,223,223,186,horarioFilme);
+        printf("%c  %c%c%c %c Preco do ingresso: R$ %.2f\n", 186,220,220,220,186, precoFilme);
+        printf("%c %c    %c Desconto: %.2f\n", 186,219,186, meiaEntrada);
+        printf("%c %c%c%c%c %c\n",186,223,223,223,223,186);
+        printf("%c %c %c%c %c \n", 186,223,223,223,186);
+        printf("%c %c  %c %c Total pago: R$ %.2f\n", 186,219,219,186, meiaEntrada);
+        printf("%c %c%c%c%c %c Desejamos um otimo filme !\n", 186,223,223,223,223,186);
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",200,205,205,205,205,205,205,202,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+    } else if(pagamento == 2)
+    {
+        printf("> Pagamento no credito concluido! \n\n");
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c|T|I|C|K|E|T|%c%c%c%c%c%c%c%c%c%c%c%c\n",201,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+        printf("%c  Filme: %s\n", 186, nomeFilme);
+        printf("%c  Horario da sessao: %s\n", 186,horarioFilme);
+        printf("%c  Preco do ingresso: R$ %.2f\n", 186, precoFilme);
+        printf("%c  Desconto: %.2f\n", 186, meiaEntrada);
+        printf("%c\n", 186);
+        printf("%c  Total pago: R$ %.2f\n", 186, meiaEntrada);
+        printf("%c  Desejamos um otimo filme !\n", 186);
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",200,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+    }
     
-    scanf("\nDigite a opcao: %d", &pagamento);
+
+    scanf("%d", &teste);
 
 }
