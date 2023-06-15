@@ -5,7 +5,7 @@
 
 
 void logo() {
-    printf("%c", 201);
+    printf("%c", 254);
 
     return 0;
 }

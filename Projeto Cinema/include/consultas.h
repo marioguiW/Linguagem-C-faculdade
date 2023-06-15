@@ -7,16 +7,15 @@
 int consultas(){
     int optionConsultas;
 
-    logo();
 
-    printf("================ Consultas ================\n");
+    printf("@=============@ Consultas @===============@\n");
     printf("|  [1] - Consultar Filmes e seus horarios |\n");
     printf("|  [2] - Procurar filme por nome          |\n");
     printf("|  [3] - Consultar clientes               |\n");
     printf("|  [4] - Procurar cliente por nome        |\n");
     printf("|  [5] - Limpar a Tela                    |\n");
     printf("|  [6] - VOLTAR                           |\n");
-    printf("=========================================\n");
+    printf("@=========================================@\n");
     printf("\nDigite a opcao desejada: ");
     scanf("%d", &optionConsultas);
 

@@ -5,10 +5,9 @@
 int cadastro(){
 
     int optionCadastro = 0;
-    
-    logo();
 
-    printf("==============* Cadastros *==============\n");
+
+    printf("*=*=*=*=*=*=*=* Cadastros *=*=*=*=*=*=*=*\n");
     printf("|  [1] - Cadastrar Filme                |\n");
     printf("|  [2] - Listar todos os filmes         |\n");
     printf("|  [3] - Cadastrar cliente              |\n");
@@ -99,7 +98,7 @@ informacoesCinema cadastro_filmes(int id){
     printf("Digite o nome do filme: ");
     fgets(nome,30,stdin);
 
-    printf("Digite o horario do filme: ");
+    printf("Digite o horario do filme (ex: 20:30): ");
     fgets(hora,30,stdin);
 
     printf("Digite o preco do ingresso: ");

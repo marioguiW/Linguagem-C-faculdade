@@ -6,9 +6,9 @@
 
 int atualiza(){
     int optionAtualiza;
-    logo();
 
-    printf("============== Atualizacoes ===============\n");
+
+    printf("ª=ª=ª=ª=ª= Atualizacoes =ª=ª=ª=ª=ª\n");
     printf("|  [1] - Atualizar dados de um Filme      |\n");
     printf("|  [2] - Remover um filme                 |\n");
     printf("|  [3] - Atualizar dados de um cliente    |\n");
@@ -77,7 +77,7 @@ void atualizar_cadastro_filmes() {
         fgets(nomeFilme, sizeof(nomeFilme), stdin);
         nomeFilme[strcspn(nomeFilme, "\n")] = '\0';  // Remove a quebra de linha do final do nome
 
-        printf("Digite o novo horario: ");
+        printf("Digite o novo horario (ex : 20:30): ");
         fgets(horario, sizeof(horario), stdin);
         horario[strcspn(horario, "\n")] = '\0';  // Remove a quebra de linha do final do horario
 

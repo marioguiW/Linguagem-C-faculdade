@@ -10,17 +10,14 @@ int venda(){
 
     int optionVenda;
 
-
-    logo();
-
-    printf("============= Venda de Ingressos =============\n");
+    printf("$===========$ Venda de Ingressos $===========$\n");
     printf("| [1] Filmes, Horarios e Precos              |\n");
     printf("| [2] Clientes no Sistema                    |\n");
     printf("| [3] Vender Ingressos                       |\n");
     printf("| [4] -------------------------              |\n");
     printf("| [5] Limpar a Tela                          |\n");
     printf("| [6] Voltar                                 |\n");
-    printf("==============================================\n");
+    printf("$============================================$\n");
     printf("\nDigite a opcao desejada: ");
     scanf("%d", &optionVenda);
 
@@ -36,6 +33,7 @@ void mostra_ticket() {
     scanf("%d", &idCliente);
     printf("Digite o ID do filme: ");
     scanf("%d", &idFilme);
+    printf("\n");
 
     FILE *fileClientes = fopen("clienteV0.txt", "r");
     if (fileClientes == NULL) {
@@ -129,7 +127,7 @@ void mostra_ticket() {
     printf("==============================================\n");
     printf("\n");
 
-    printf("\n============= Continuando Compra ============\n");
+    printf("\n============= Continuando Compra =============\n");
     if(idadeCliente >= 18){
         printf("| Total a pagar: R$ %.2f\n", precoFilme);
     }else if(idadeCliente < 18){
@@ -140,8 +138,8 @@ void mostra_ticket() {
     printf("| [1] A vista\n");
     printf("| [2] Credito\n");
     printf("|\n");
-    printf("=============================================\n");
-    printf("|Digite a opcao: ");
+    printf("==============================================\n");
+    printf("Digite a opcao: ");
     scanf("%d", &pagamento);
 
 
@@ -157,31 +155,28 @@ void mostra_ticket() {
     if (pagamento == 1)
     {
         printf("> Pagamento a vista concluido! \n\n");
-        printf("%c%c%c%c%c%c%c%c%c%c%c%c|T|I|C|K|E|T|%c%c%c%c%c%c%c%c%c%c%c%c\n",201,205,205,205,205,205,205,203,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
-        printf("%c %c %c%c%c Filme: %s\n", 186,219,221,219,186, nomeFilme);
-        printf("%c %c%c%c%c%c%c Horario da sessao: %s\n", 186,223,223,223,223,223,186,horarioFilme);
-        printf("%c  %c%c%c %c Preco do ingresso: R$ %.2f\n", 186,220,220,220,186, precoFilme);
-        printf("%c %c    %c Desconto: %.2f\n", 186,219,186, meiaEntrada);
-        printf("%c %c%c%c%c %c\n",186,223,223,223,223,186);
-        printf("%c %c %c%c %c \n", 186,223,223,223,186);
-        printf("%c %c  %c %c Total pago: R$ %.2f\n", 186,219,219,186, meiaEntrada);
-        printf("%c %c%c%c%c %c Desejamos um otimo filme !\n", 186,223,223,223,223,186);
-        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",200,205,205,205,205,205,205,202,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c|T|I|C|K|E|T|%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",201,205,205,205,205,205,205,205,203,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+        printf("%c %c %c %c %c Filme: %s\n", 186,219,220,219,186, nomeFilme);
+        printf("%c %c%c%c%c%c %c Horario da sessao: %s\n", 186,219,219,219,219,219,186,horarioFilme);
+        printf("%c  %c%c%c%c %c Preco do ingresso: R$ %.2f\n", 186,220,220,220,220,186, precoFilme);
+        printf("%c %c     %c Desconto: %.2f\n", 186,219,186, meiaEntrada);
+        printf("%c %c%c%c%c%c %c\n",186,223,223,223,223,223,186);
+        printf("%c %c %c%c%c %c \n", 186,223,223,223,223,186);
+        printf("%c %c   %c %c Total pago: R$ %.2f\n", 186,219,219,186, meiaEntrada);
+        printf("%c %c%c%c%c%c %c Desejamos um otimo filme !\n", 186,223,223,223,223,223,186);
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n\n",200,205,205,205,205,205,205,205,202,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
     } else if(pagamento == 2)
     {
         printf("> Pagamento no credito concluido! \n\n");
-        printf("%c%c%c%c%c%c%c%c%c%c%c%c|T|I|C|K|E|T|%c%c%c%c%c%c%c%c%c%c%c%c\n",201,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
-        printf("%c  Filme: %s\n", 186, nomeFilme);
-        printf("%c  Horario da sessao: %s\n", 186,horarioFilme);
-        printf("%c  Preco do ingresso: R$ %.2f\n", 186, precoFilme);
-        printf("%c  Desconto: %.2f\n", 186, meiaEntrada);
-        printf("%c\n", 186);
-        printf("%c  Total pago: R$ %.2f\n", 186, meiaEntrada);
-        printf("%c  Desejamos um otimo filme !\n", 186);
-        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",200,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c|T|I|C|K|E|T|%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",201,205,205,205,205,205,205,205,203,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+        printf("%c %c %c %c %c Filme: %s\n", 186,219,220,219,186, nomeFilme);
+        printf("%c %c%c%c%c%c %c Horario da sessao: %s\n", 186,219,219,219,219,219,186,horarioFilme);
+        printf("%c  %c%c%c%c %c Preco do ingresso: R$ %.2f\n", 186,220,220,220,220,186, precoFilme);
+        printf("%c %c     %c Desconto: %.2f\n", 186,219,186, meiaEntrada);
+        printf("%c %c%c%c%c%c %c\n",186,223,223,223,223,223,186);
+        printf("%c %c %c%c%c %c \n", 186,223,223,223,223,186);
+        printf("%c %c   %c %c Total pago: R$ %.2f\n", 186,219,219,186, meiaEntrada);
+        printf("%c %c%c%c%c%c %c Desejamos um otimo filme !\n", 186,223,223,223,223,223,186);
+        printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n\n",200,205,205,205,205,205,205,205,202,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
     }
-    
-
-    scanf("%d", &teste);
-
 }
