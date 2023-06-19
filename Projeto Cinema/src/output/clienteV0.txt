@@ -1,8 +1,3 @@
-id : 2
-Nome do cliente: Heloise
-Idade do cliente: 16
-
-
 id : 3
 Nome do cliente: Juliana
 Idade do cliente: 16;
@@ -11,11 +6,11 @@ id : 5
 Nome do cliente: Juliana OF
 Idade do cliente: 15;
 
-id : 6
-Nome do cliente: Mario Gui
-Idade do cliente: 17;
-
 id : 7
 Nome do cliente: juLIANA FURLAN
 Idade do cliente: 15;
+
+id : 8
+Nome do cliente: rudson
+Idade do cliente: 18;
 

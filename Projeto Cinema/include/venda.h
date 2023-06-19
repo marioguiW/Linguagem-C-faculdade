@@ -152,6 +152,9 @@ void mostra_ticket() {
     printf("\n");
     system("cls");
 
+    FILE *ticket = fopen("ticketV0.txt", "a");
+
+
     if (pagamento == 1)
     {
         printf("> Pagamento a vista concluido! \n\n");
@@ -165,6 +168,18 @@ void mostra_ticket() {
         printf("%c %c   %c %c Total pago: R$ %.2f\n", 186,219,219,186, meiaEntrada);
         printf("%c %c%c%c%c%c %c Desejamos um otimo filme !\n", 186,223,223,223,223,223,186);
         printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n\n",200,205,205,205,205,205,205,205,202,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+    
+        fprintf(ticket,"> Pagamento a vista concluido! \n");
+        fprintf(ticket,"%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c|T|I|C|K|E|T|%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",201,205,205,205,205,205,205,205,203,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+        fprintf(ticket,"%c %c %c %c %c Filme: %s\n", 186,219,220,219,186, nomeFilme);
+        fprintf(ticket,"%c %c%c%c%c%c %c Horario da sessao: %s\n", 186,219,219,219,219,219,186,horarioFilme);
+        fprintf(ticket,"%c  %c%c%c%c %c Preco do ingresso: R$ %.2f\n", 186,220,220,220,220,186, precoFilme);
+        fprintf(ticket,"%c %c     %c Desconto: %.2f\n", 186,219,186, meiaEntrada);
+        fprintf(ticket,"%c %c%c%c%c%c %c\n",186,223,223,223,223,223,186);
+        fprintf(ticket,"%c %c %c%c%c %c \n", 186,223,223,223,223,186);
+        fprintf(ticket,"%c %c   %c %c Total pago: R$ %.2f\n", 186,219,219,186, meiaEntrada);
+        fprintf(ticket,"%c %c%c%c%c%c %c Desejamos um otimo filme !\n", 186,223,223,223,223,223,186);
+        fprintf(ticket,"%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n\n",200,205,205,205,205,205,205,205,202,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
     } else if(pagamento == 2)
     {
         printf("> Pagamento no credito concluido! \n\n");
@@ -178,5 +193,18 @@ void mostra_ticket() {
         printf("%c %c   %c %c Total pago: R$ %.2f\n", 186,219,219,186, meiaEntrada);
         printf("%c %c%c%c%c%c %c Desejamos um otimo filme !\n", 186,223,223,223,223,223,186);
         printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n\n",200,205,205,205,205,205,205,205,202,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+    
+        fprintf(ticket,"> Pagamento no credito concluido! \n");
+        fprintf(ticket,"%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c|T|I|C|K|E|T|%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",201,205,205,205,205,205,205,205,203,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
+        fprintf(ticket,"%c %c %c %c %c Filme: %s\n", 186,219,220,219,186, nomeFilme);
+        fprintf(ticket,"%c %c%c%c%c%c %c Horario da sessao: %s\n", 186,219,219,219,219,219,186,horarioFilme);
+        fprintf(ticket,"%c  %c%c%c%c %c Preco do ingresso: R$ %.2f\n", 186,220,220,220,220,186, precoFilme);
+        fprintf(ticket,"%c %c     %c Desconto: %.2f\n", 186,219,186, meiaEntrada);
+        fprintf(ticket,"%c %c%c%c%c%c %c\n",186,223,223,223,223,223,186);
+        fprintf(ticket,"%c %c %c%c%c %c \n", 186,223,223,223,223,186);
+        fprintf(ticket,"%c %c   %c %c Total pago: R$ %.2f\n", 186,219,219,186, meiaEntrada);
+        fprintf(ticket,"%c %c%c%c%c%c %c Desejamos um otimo filme !\n", 186,223,223,223,223,223,186);
+        fprintf(ticket,"%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n\n",200,205,205,205,205,205,205,205,202,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,205,219);
     }
+    fclose(ticket);
 }

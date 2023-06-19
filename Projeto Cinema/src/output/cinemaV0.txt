@@ -18,3 +18,19 @@ Nome do filme: Jogos Vorazes
 Horario : 19:45
 Preco : 19.00;
 
+id : 5
+Nome do filme: 12
+Horario : 23:23
+Preco : 15.00
+ : 1.20;
+
+id : 6
+Nome do filme: homem aranha
+Horario : 20:00
+Preco : 12.00;
+
+id : 7
+Nome do filme: resenha 2
+Horario : 20:30
+Preco : 12.00;
+

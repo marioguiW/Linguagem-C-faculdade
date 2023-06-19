@@ -45,7 +45,6 @@ int main(){
 
     do
     {
-
         logo();
 
         int valor_tabela = 0;
