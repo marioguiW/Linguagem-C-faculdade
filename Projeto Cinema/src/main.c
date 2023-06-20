@@ -17,8 +17,6 @@ void logo(){
     printf("\n\n");
 }
 
-
-
 int main(){
 
     FILE *cinema;
@@ -45,7 +43,6 @@ int main(){
 
     do
     {
-
         logo();
 
         int valor_tabela = 0;

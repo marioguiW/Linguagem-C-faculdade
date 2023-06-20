@@ -18,3 +18,13 @@ Nome do filme: Jogos Vorazes
 Horario : 19:45
 Preco : 19.00;
 
+id : 5
+Nome do filme: Legalmente loira
+Horario : 20:30
+Preco : 15.00;
+
+id : 6
+Nome do filme: Shrek 4
+Horario : 16:30
+Preco : 20.00;
+

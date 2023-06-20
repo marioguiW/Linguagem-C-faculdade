@@ -19,3 +19,7 @@ id : 7
 Nome do cliente: juLIANA FURLAN
 Idade do cliente: 15;
 
+id : 8
+Nome do cliente: JULIANA OCHOA
+Idade do cliente: 15;
+
