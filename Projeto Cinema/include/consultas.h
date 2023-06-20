@@ -22,12 +22,6 @@ int consultas(){
     return optionConsultas;
 }
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-
-#define MAX_LINE_LENGTH 1000
-
 void filtrar_filme_por_nome() {
     FILE *file = fopen("cinemaV0.txt", "r");
     if (file == NULL) {

@@ -128,6 +128,7 @@ void atualizar_cadastro_clientes() {
                 encontrou = 1;
                 emBloco = 1;
                 posicaoAtual = ftell(file);
+                // obtem a posição atual no arquivo e armazena na variável posicaoAtual
             }
         }
     }
@@ -136,12 +137,13 @@ void atualizar_cadastro_clientes() {
         printf("Nenhum cliente encontrado com o ID especificado.\n");
     } else {
         fseek(file, posicaoAtual, SEEK_SET);
+        //  move a posição atual no arquivo para a posição armazenada na variável posicaoAtual.
 
         char nomeCliente[50];
         int idade;
 
         printf("Digite o novo nome do cliente: ");
-        getchar(); // Limpar o buffer do teclado
+        getchar(); // Limpar o buffer do teclado == fflush
         fgets(nomeCliente, sizeof(nomeCliente), stdin);
         nomeCliente[strcspn(nomeCliente, "\n")] = '\0';  // Remove a quebra de linha do final do nome
 
@@ -170,7 +172,7 @@ void excluir_cliente_por_id() {
 
     FILE *tempFile = fopen("temp.txt", "w");
     if (tempFile == NULL) {
-        printf("Erro ao criar arquivo temporário.\n");
+        printf("Erro ao criar arquivo temporario.\n");
         fclose(file);
         return;
     }
